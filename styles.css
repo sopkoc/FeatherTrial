@@ -1,130 +1,76 @@
-/* Basic Reset */
-body, h1, h2, p, ul {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     color: #333;
-    background-color: #f0f0f0; /* Light gray background */
 }
 
 header {
-    background-color: #003366; /* Dark blue background */
-    color: #fff;
+    background-color: #f8f9fa;
     padding: 20px 0;
-    text-align: center;
+    border-bottom: 1px solid #ddd;
 }
 
-.header-content h1 {
-    margin-bottom: 10px;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
     text-decoration: none;
+    color: #007bff;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-#hero {
-    background-color: #00509e; /* Blue background for hero section */
+.hero {
+    background-color: #007bff;
     color: #fff;
+    padding: 60px 0;
     text-align: center;
-    padding: 40px 20px;
 }
 
-.hero-content h2 {
-    margin-bottom: 15px;
-}
-
-.cta-button {
-    background-color: #ffcc00; /* Yellow button for contrast */
-    color: #003366;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.cta-button:hover {
-    background-color: #ffb700;
+.hero h2 {
+    margin: 0;
 }
 
 section {
-    padding: 20px;
-    margin: 10px;
+    padding: 60px 20px;
 }
 
-section#about, section#resources, section#contact {
-    background-color: #e0e0e0; /* Light gray background for sections */
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+section h2 {
+    margin-top: 0;
 }
 
 footer {
-    background-color: #003366;
-    color: #fff;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+    padding: 20px 0;
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
-/* Dropdown Styles */
-.dropdown {
-    position: relative;
-    display: inline-block;
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.dropbtn {
-    background-color: #003366; /* Blue background for dropdown button */
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: #333;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 
 .dropdown:hover .dropbtn {
     background-color: #002244; /* Darker blue on hover */
