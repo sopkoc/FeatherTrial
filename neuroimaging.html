@@ -3,31 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neuroimaging</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Neuroimaging - FeatherBrain</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Neuroimaging</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Neuroimaging</a></li>
-                <li><a href="#">Coding</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Neuroimaging</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="neuroimaging.html">Neuroimaging</a></li>
+                    <li><a href="#">Coding</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
         <section id="neuroimaging">
-            <h2>Explore Neuroimaging Techniques</h2>
-            <div class="buttons">
-                <button>MRI</button>
-                <button>CT</button>
-                <button>PET</button>
-                <button>EEG</button>
+            <div class="container">
+                <h2>Explore Neuroimaging Techniques</h2>
+                <div class="buttons">
+                    <button onclick="alert('MRI Selected')">MRI</button>
+                    <button onclick="alert('CT Selected')">CT</button>
+                    <button onclick="alert('PET Selected')">PET</button>
+                    <button onclick="alert('EEG Selected')">EEG</button>
+                </div>
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 FeatherBrain. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
