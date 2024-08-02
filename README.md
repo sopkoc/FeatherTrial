@@ -1,1 +1,2 @@
-# FeatherTrial.github.io
+# FeatherTrial
+Feathers are cool and I like them
