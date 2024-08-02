@@ -78,68 +78,33 @@ main {
     color: #555;
 }
 
-#carousel {
-    padding: 20px 0;
-}
-
-.carousel-container {
+/* Cube Grid */
+#cube-grid {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 20px;
-    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.carousel-card {
-    flex: 0 0 300px;
-    height: 150px;
-    margin: 10px;
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.grid-item {
+    background-color: #4dd0e1;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
     font-size: 1.2em;
-    scroll-snap-align: center;
     transition: transform 0.3s ease-in-out;
 }
 
-.carousel-card:hover {
+.grid-item:hover {
     transform: translateY(-10px);
-}
-
-#neuroimaging {
-    text-align: center;
-}
-
-#neuroimaging h2 {
-    font-size: 2em;
-    color: #1e90ff;
-    margin-bottom: 20px;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.buttons button {
-    background-color: #1e90ff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 15px 30px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.buttons button:hover {
-    background-color: #0a5fc4;
 }
 
 footer {
