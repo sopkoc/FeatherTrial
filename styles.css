@@ -99,17 +99,6 @@ main {
     transform: translateY(-10px);
 }
 
-.card h3 {
-    font-size: 1.4em;
-    color: #1e90ff;
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 1em;
-    color: #777;
-}
-
 /* Neuroimaging Page */
 #neuroimaging {
     text-align: center;
