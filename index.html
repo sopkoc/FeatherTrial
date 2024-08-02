@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FeatherBrain</title>
+    <title>FeatherBrain Carousel</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -26,21 +26,23 @@
         </nav>
     </header>
 
-    <section id="carousel">
-        <div class="carousel-container">
-            <div class="carousel-card" style="background-color: #e0f7fa;">MRI Intro</div>
-            <div class="carousel-card" style="background-color: #b2ebf2;">Python Resources</div>
-            <div class="carousel-card" style="background-color: #80deea;">EEG Intro</div>
-            <div class="carousel-card" style="background-color: #4dd0e1;">CT Data Intro</div>
-            <div class="carousel-card" style="background-color: #26c6da;">PET Data</div>
-            <div class="carousel-card" style="background-color: #00bcd4;">R Resources</div>
-        </div>
-    </section>
-
     <section id="about">
         <div class="container">
             <h2>About FeatherBrain</h2>
             <p>FeatherBrain provides tutorials, code snippets, and resources for Python and Matlab enthusiasts.</p>
+        </div>
+    </section>
+
+    <section id="carousel">
+        <div class="container">
+            <div class="carousel-inner">
+                <div class="carousel-item" style="background-color: #e0f7fa;">MRI Intro</div>
+                <div class="carousel-item" style="background-color: #b2ebf2;">Python Resources</div>
+                <div class="carousel-item" style="background-color: #80deea;">EEG Intro</div>
+                <div class="carousel-item" style="background-color: #4dd0e1;">CT Data Intro</div>
+                <div class="carousel-item" style="background-color: #26c6da;">PET Data</div>
+                <div class="carousel-item" style="background-color: #00bcd4;">R Resources</div>
+            </div>
         </div>
     </section>
 
@@ -65,13 +67,53 @@
     </footer>
 
     <script>
+        // Toggle menu
         function toggleMenu() {
             var menu = document.getElementById("menu");
-            if (menu.classList.contains("hidden")) {
-                menu.classList.remove("hidden");
-            } else {
-                menu.classList.add("hidden");
+            menu.classList.toggle("hidden");
+        }
+
+        // Carousel Drag Functionality
+        const carouselInner = document.querySelector('.carousel-inner');
+        let isDragging = false, startPos = 0, currentTranslate = 0, prevTranslate = 0, animationID = 0;
+
+        carouselInner.addEventListener('mousedown', (event) => {
+            isDragging = true;
+            startPos = event.pageX - currentTranslate;
+            animationID = requestAnimationFrame(animation);
+            carouselInner.classList.add('grabbing');
+        });
+
+        carouselInner.addEventListener('mouseup', () => {
+            isDragging = false;
+            cancelAnimationFrame(animationID);
+            prevTranslate = currentTranslate;
+            carouselInner.classList.remove('grabbing');
+        });
+
+        carouselInner.addEventListener('mouseleave', () => {
+            if (isDragging) {
+                isDragging = false;
+                cancelAnimationFrame(animationID);
+                prevTranslate = currentTranslate;
+                carouselInner.classList.remove('grabbing');
             }
+        });
+
+        carouselInner.addEventListener('mousemove', (event) => {
+            if (isDragging) {
+                const currentPosition = event.pageX;
+                currentTranslate = prevTranslate + currentPosition - startPos;
+            }
+        });
+
+        function animation() {
+            setCarouselPosition();
+            if (isDragging) requestAnimationFrame(animation);
+        }
+
+        function setCarouselPosition() {
+            carouselInner.style.transform = `translateX(${currentTranslate}px)`;
         }
     </script>
 </body>
