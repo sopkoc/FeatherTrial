@@ -5,47 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FeatherBrain</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>FeatherBrain</h1>
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+                <h1>FeatherBrain</h1>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <button class="audio-button">
+                    <img src="audio-icon.png" alt="Audio">
+                    <span>Audio Guide</span>
+                </button>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button><img src="search-icon.png" alt="Search"></button>
+                </div>
             </nav>
         </div>
     </header>
 
-    <section id="home" class="hero">
+    <section id="hero">
         <div class="container">
             <h2>Welcome to FeatherBrain</h2>
-            <p>Your source for coding assistance with Python and Matlab.</p>
+            <p>Comprehensive coding assistance and resources.</p>
+            <button class="cta-button">Learn More</button>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
-            <h2>About Us</h2>
-            <p>FeatherBrain provides comprehensive coding tutorials and resources for Python and Matlab enthusiasts.</p>
+            <h2>About FeatherBrain</h2>
+            <p>FeatherBrain provides tutorials, code snippets, and resources for Python and Matlab enthusiasts.</p>
         </div>
     </section>
 
     <section id="services">
         <div class="container">
             <h2>Our Services</h2>
-            <p>We offer a range of services including tutorials, code snippets, and project ideas.</p>
+            <div class="card">
+                <h3>Python Tutorials</h3>
+                <p>Learn Python from basics to advanced topics.</p>
+            </div>
+            <div class="card">
+                <h3>Matlab Tutorials</h3>
+                <p>Explore Matlab with our comprehensive guides.</p>
+            </div>
+            <div class="card">
+                <h3>Project Ideas</h3>
+                <p>Get inspired with project ideas and challenges.</p>
+            </div>
         </div>
     </section>
 
     <section id="contact">
         <div class="container">
             <h2>Contact Us</h2>
-            <p>Get in touch with us for more information or inquiries.</p>
+            <p>Reach out for more information or inquiries.</p>
         </div>
     </section>
 
